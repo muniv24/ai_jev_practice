@@ -1,0 +1,29 @@
+.gitignore
+  s_9db3ffde442eef::t_01c7acc98da887 1-3
+.vscode/launch.json
+  s_9db3ffde442eef::t_bd5bafe81ff0a4 1-45
+.vscode/settings.json
+  s_9db3ffde442eef::t_85c49c37559281 1-4
+README.md
+  s_9db3ffde442eef::t_f8a6f92d007dbc 1-50
+docs/project_flow.html
+  s_9db3ffde442eef::t_9fc482e45958a1 1-14988
+jev_client.py
+  s_9db3ffde442eef::t_5cb410f91e42be 1-168
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "921ef76d0bfb006059f44acece99978b69f670e2",
+  "prompts": {},
+  "sessions": {
+    "s_9db3ffde442eef": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1132eeef-bdab-46d3-b846-ea2310977932",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Muni Personal <munis.sign@gmail.com>"
+    }
+  }
+}
