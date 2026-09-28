@@ -1,0 +1,21 @@
+command,risky
+"show ip interface brief",no
+"show running-config",no
+"write erase",yes
+"reload",yes
+"ping 10.0.0.1",no
+"no router bgp 65001",yes
+"interface Gi0/1 ; shutdown",yes
+"show logging | include BGP",no
+"copy running-config startup-config",no
+"format flash:",yes
+"traceroute 8.8.8.8",no
+"no vlan 1-4094",yes
+"show version",no
+"clear ip bgp *",yes
+"debug all",yes
+"show cdp neighbors",no
+"crypto key zeroize rsa",yes
+"show interfaces counters errors",no
+"delete /force /recursive flash:",yes
+"show ip route",no

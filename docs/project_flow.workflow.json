@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Jev Practice Lab Flow",
+    "quality_profile": "showcase"
+  },
+  "lanes": [
+    { "id": "project", "label": "Project script (projects/pN_*.py)" },
+    { "id": "client", "label": "jev_client.py" },
+    { "id": "jev", "label": "TypeSafe Jev API" },
+    { "id": "fallback", "label": "Offline fallback", "variant": "exception" }
+  ],
+  "phases": [
+    { "id": "load", "label": "Load", "fromCol": 0, "toCol": 1 },
+    { "id": "ask", "label": "Ask Jev", "fromCol": 2, "toCol": 3, "variant": "emphasis" },
+    { "id": "decide", "label": "Decide + evaluate", "fromCol": 4, "toCol": 5 }
+  ],
+  "mainPath": ["csv", "script", "dotenv", "mode", "jev_api", "decide", "report"],
+  "nodes": [
+    { "id": "csv", "lane": "project", "col": 0, "type": "database", "label": "Labeled CSV", "sublabel": "data/*.csv", "width": 140 },
+    { "id": "script", "lane": "project", "col": 1, "type": "backend", "label": "Build questions", "sublabel": "Choice / Score / Noul", "width": 140 },
+    { "id": "decide", "lane": "project", "col": 4, "type": "backend", "label": "Decision logic", "sublabel": "thresholds in code", "tag": "act / confirm / human", "width": 140 },
+    { "id": "report", "lane": "project", "col": 5, "type": "frontend", "label": "eval_harness", "sublabel": "accuracy per confidence", "width": 150 },
+    { "id": "dotenv", "lane": "client", "col": 1, "type": "security", "label": "Load .env", "sublabel": "TYPESAFE_API_KEY", "width": 140 },
+    { "id": "mode", "lane": "client", "col": 2, "type": "security", "label": "is_mock()?", "sublabel": "key + SDK present", "width": 140 },
+    { "id": "jev_api", "lane": "jev", "col": 3, "type": "cloud", "label": "Jev System One", "sublabel": "POST /v1/systemone", "tag": "70-500 ms", "width": 150 },
+    { "id": "mock", "lane": "fallback", "col": 3, "type": "external", "label": "Mock heuristic", "sublabel": "word overlap, NOT Jev", "width": 150 }
+  ],
+  "edges": [
+    { "id": "rows", "from": "csv", "to": "script", "label": "rows" },
+    { "id": "ask-call", "from": "script", "to": "dotenv", "label": "ask(state, questions)", "variant": "emphasis" },
+    { "id": "check-mode", "from": "dotenv", "to": "mode" },
+    { "id": "real-call", "from": "mode", "to": "jev_api", "label": "real", "variant": "emphasis" },
+    { "id": "mock-call", "from": "mode", "to": "mock", "label": "no key", "variant": "dashed", "role": "branch" },
+    { "id": "typed-answers", "from": "jev_api", "to": "decide", "label": "answer + confidence", "variant": "emphasis" },
+    { "id": "mock-answers", "from": "mock", "to": "decide", "label": "same shape", "variant": "dashed", "role": "branch" },
+    { "id": "scored", "from": "decide", "to": "report", "label": "pred vs label" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "One call, many questions",
+      "items": [
+        "Each question is answered independently against the same state",
+        "Answers come back as choice / score / noul with probabilities"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Confidence drives the action",
+      "items": [
+        "conf > 0.9 acts automatically, 0.5-0.9 confirms, < 0.5 goes to a human",
+        "eval_harness checks that high confidence really means high accuracy"
+      ]
+    }
+  ]
+}

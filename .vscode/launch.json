@@ -1,0 +1,45 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "P1 Ticket triage",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "projects.p1_ticket_triage",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "P2 Log severity",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "projects.p2_log_severity",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "P3 CLI risk gate",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "projects.p3_cli_risk_gate",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "P4 LLM output grader",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "projects.p4_llm_output_grader",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "P5 Confidence router",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "projects.p5_confidence_router",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

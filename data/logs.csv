@@ -1,0 +1,21 @@
+log,severity
+"%LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed state to up",0
+"%SYS-5-CONFIG_I: Configured from console by admin",0
+"%SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: netops]",0
+"%OSPF-5-ADJCHG: Process 1, Nbr 10.0.0.2 on Gi0/2 from FULL to DOWN, Neighbor Down: Dead timer expired",2
+"%BGP-5-ADJCHANGE: neighbor 203.0.113.1 Down BGP Notification sent, hold time expired",2
+"%ENVMON-4-FAN_LOW_RPM: Fan 2 running below expected speed",1
+"%PLATFORM-1-TEMP_CRITICAL: Chassis temperature critical, system shutdown imminent",3
+"%SEC_LOGIN-4-LOGIN_FAILED: Login failed [user: admin] [Source: 198.51.100.7] - repeated 500 times",2
+"%DUAL-5-NBRCHANGE: EIGRP-IPv4 100: Neighbor 10.1.1.1 is up: new adjacency",0
+"%PM-4-ERR_DISABLE: bpduguard error detected on Gi1/0/12, putting Gi1/0/12 in err-disable state",1
+"%POWER-2-PS_FAIL: Power supply 1 failed, running on single supply",2
+"%STACKMGR-1-STACK_LINK_CHANGE: Stack port down, stack split detected",3
+"%DOT1X-5-SUCCESS: Authentication successful for client on Gi1/0/5",0
+"%IP-4-DUPADDR: Duplicate address 10.2.2.10 on Vlan20",1
+"%SYS-2-MALLOCFAIL: Memory allocation failed, process crashed",3
+"%CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on Gi0/3",1
+"%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan10, changed state to down",1
+"%HA-1-FAILOVER: Active supervisor failed, standby taking over",3
+"%NTP-5-PEERSYNC: NTP synced to peer 10.0.0.1",0
+"%STORM_CONTROL-3-FILTERED: broadcast storm detected on Gi1/0/8, packets filtered",2

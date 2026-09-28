@@ -1,0 +1,17 @@
+question,answer,grade
+"What does OSPF stand for?","Open Shortest Path First, a link-state interior gateway routing protocol.",2
+"What does OSPF stand for?","It is a Cisco proprietary protocol for switching.",0
+"What is the default administrative distance of OSPF?","110",2
+"What is the default administrative distance of OSPF?","I think it is around 100 or so, it depends.",0
+"Explain VLAN.","A VLAN logically segments a layer-2 network into separate broadcast domains on the same switch.",2
+"Explain VLAN.","A VLAN is a virtual network.",1
+"What port does SSH use?","TCP 22",2
+"What port does SSH use?","SSH uses port 22 but over UDP only.",0
+"What is BGP used for?","BGP exchanges routes between autonomous systems, it is the routing protocol of the internet.",2
+"What is BGP used for?","Routing.",1
+"What is NAT?","Network Address Translation rewrites IP addresses so private hosts can share public addresses.",2
+"What is NAT?","It translates stuff.",1
+"What is a subnet mask /24 in dotted decimal?","255.255.255.0",2
+"What is a subnet mask /24 in dotted decimal?","255.255.0.0",0
+"What does STP prevent?","Spanning Tree Protocol prevents layer-2 loops by blocking redundant paths.",2
+"What does STP prevent?","It prevents slow networks.",0

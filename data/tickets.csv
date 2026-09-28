@@ -1,0 +1,21 @@
+text,team,urgent
+"Our invoice for September was charged twice on the corporate card",billing,no
+"VPN tunnel to the Bangalore site keeps dropping every 10 minutes, whole office offline",network,yes
+"Can I get a quote for 50 more Webex licenses?",sales,no
+"Password reset link is not arriving in my inbox",identity,no
+"BGP session with ISP flapping, customers seeing packet loss right now",network,yes
+"Please update the billing address on our subscription",billing,no
+"MFA prompt never shows up on my phone, locked out before the board meeting in 10 min",identity,yes
+"What is the price difference between Meraki MX67 and MX68?",sales,no
+"Switch port Gi1/0/24 shows err-disabled after cable swap",network,no
+"Refund for the cancelled training seat has not been received",billing,no
+"Production firewall rejecting all traffic after config push, outage in progress",network,yes
+"Need SSO access to the partner portal for a new hire",identity,no
+"Interested in a demo of ThousandEyes for our NOC",sales,no
+"Payment failed and our service will be suspended tonight",billing,yes
+"Wi-Fi in building 3 is slow in the afternoons",network,no
+"Account locked after too many login attempts, payroll run is due in one hour",identity,yes
+"Do you offer education discounts for SD-WAN?",sales,no
+"Duplicate tax line on the latest invoice",billing,no
+"DNS resolution failing for all internal hosts, nobody can work",network,yes
+"Please remove a departed employee's admin access today",identity,no
